@@ -1,0 +1,187 @@
+.page {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.blob1 {
+  position: fixed;
+  width: 300px; height: 300px;
+  top: -60px; right: -60px;
+  background: radial-gradient(circle, rgba(124,58,237,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(17,17,24,0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border2);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+.backBtn { padding: 8px 12px; font-size: 13px; }
+.headerTitle {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.2px;
+}
+
+/* ── Scroll container ── */
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Profile hero ── */
+.profileHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 0 20px;
+  gap: 6px;
+}
+
+.imgWrap {
+  position: relative;
+  margin-bottom: 12px;
+}
+.profileImg {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--purple);
+  box-shadow: 0 0 0 6px var(--purple-dim), 0 12px 40px rgba(124,58,237,0.35);
+  display: block;
+}
+.imgGlow {
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.badgeRow { display: flex; gap: 8px; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--text2);
+}
+.badgePurple {
+  background: var(--purple-dim);
+  border-color: var(--border);
+  color: var(--purple-light);
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.school {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple-light);
+}
+.schoolSub {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+/* ── Sections ── */
+.section {
+  margin-bottom: 20px;
+}
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text3);
+  margin-bottom: 10px;
+  padding-left: 2px;
+}
+
+.aboutText {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+/* ── Features ── */
+.features { display: flex; flex-direction: column; gap: 8px; }
+.featureCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  transition: border-color 0.2s;
+}
+.featureCard:hover { border-color: var(--border); }
+.featureIcon { font-size: 20px; flex-shrink: 0; }
+.featureLabel { font-size: 14px; font-weight: 600; color: var(--text); }
+.featureDesc { font-size: 12px; color: var(--text3); margin-top: 1px; }
+
+/* ── Stack chips ── */
+.stack { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  color: var(--text2);
+}
+
+/* ── Credit ── */
+.credit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--bg2) 0%, rgba(124,58,237,0.08) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 8px;
+}
+.creditStar {
+  font-size: 22px;
+  color: var(--purple-light);
+}
+.creditMain { font-size: 14px; font-weight: 600; color: var(--text); }
+.creditSub { font-size: 12px; color: var(--text3); margin-top: 2px; }
